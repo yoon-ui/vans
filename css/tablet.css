@@ -1,0 +1,510 @@
+@charset "UTF-8";
+
+/* sprites & icon ====================================================== */
+.sp{display: inline-block; background: url(../img/mobile_sprites.png) no-repeat;
+    background-size: 350px 328px;
+}
+.sp-logo{width: 75px; height: 30px; background-position: 0 -50px;}
+.sp-logo-black{width: 124px; height: 50px; background-position: 0 -50px;}
+
+.sp-shop{width: 50px; height: 50px; background-position: -100px 0;}
+.sp-toggle-shop{width: 40px; height: 40px; background-position: 0 0;}
+.sp-search{width: 50px; height: 50px; background-position: -200px 0;}
+.sp-menu{width: 50px; height: 50px; background-position: -300px 0;}
+
+
+.sp-sns1{width: 50px; height: 50px; background-position: -200px -200px;}
+.sp-sns2{width: 50px; height: 50px; background-position: -250px -200px;}
+
+.sp-sns-icon1{width: 50px; height: 50px; background-position: -250px -150px;}
+.sp-sns-icon2{width: 50px; height: 50px; background-position: -200px -150px;}
+.sp-popup-paint{width: 50px; height: 50px; background-position: -200px -100px;}
+.sp-popup-close{width: 50px; height: 50px; background-position: -250px -100px;}
+
+
+.sp-plus{width: 50px; height: 50px; background-position: -200px -50px;}
+.sp-minus{width: 50px; height: 50px; background-position: -250px -50px;}
+.sp-footerLogo{width: 85px; height: 30px; background-position: -5px -200px;}
+.sp-left{width: 13px; height: 19px;    background-position: -160px -265px; vertical-align: bottom; }
+.sp-right{width: 13px; height: 19px; background-position: -210px -265px; vertical-align: bottom; }
+.sp-quicMenu
+
+
+/* header ================================================================== */
+.mobile, .m, .toggle-shop{display: block;}
+#btn-menu{display: block;}
+#btn-menu .sp-menu{
+    display: block;
+}
+/* 공통 */
+.title h3 {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'OpenSans-ExtraBold';
+}
+.title span {
+    display: block;
+    font-size: 12px;
+}
+
+/* header =========================================================================*/
+header {
+    padding: 0 10px;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+header .mobile {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+header .mobile> .sp-logo{
+    position: absolute;
+    top: 12px;
+    transform: translate(-50%);
+}
+
+header .mobile>.sp-shop{
+    float: right;
+}
+
+
+
+/* toggle */
+header nav {
+    position: fixed;
+    left: -300px;
+    bottom: 0;
+    top: 0;
+    width: 300px;
+    padding: 20px 0;
+    background: #fff;
+    transition: left 0.5s;
+    transform: none;
+}
+.open header nav{
+    left:0;
+}
+#btn-menu{
+   position: absolute;
+    top: 0px;
+    right: -60px;
+}
+.open #btn-menu .sp-menu{
+    color: #fff; 
+    background-position: -250px 0;   
+}
+
+header nav h1 {
+    display: inherit;
+    text-align: center;
+}
+
+header nav .util {
+    float: none;
+    display: block;
+}
+
+header nav .util .menu {
+    display: block;
+    padding-top: 90px;
+}
+
+header nav .util .menu>li {
+    float:none;
+    padding: 0;
+}
+
+header nav .menu>li a{
+    display: block;
+    height: 60px;
+    margin: 0;
+    padding: 0 25px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+}
+
+header nav .util .menu-etc {
+    display: none;
+}
+header nav .menu li:hover a::after{
+    content: '';
+    display: none;
+}
+
+/* header-검색창 */
+ header .search {
+    display: block !important;
+    position: absolute;
+    top: 92px;
+    left: 22px;
+}
+
+header .search input#form-search {
+    width: 200px !important;
+    padding: 0px 41px 0 10px;
+}
+
+header .search>span.sp-search {
+    top: 69px;
+    left: 195px;
+}
+header .search>span.sp-search {
+    top: 50%;
+    left: initial;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+header nav .util .menu>li:hover a{color:#000;}
+header nav .menu li:hover a::after{
+    content: '';
+    display: none;
+}
+
+header nav .util .toggle-shop{
+    display: inline-block;
+    margin: 20px 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.98);
+    color: #fff;
+
+}
+header nav .util .toggle-shop>span{
+    display: inline-flex;
+    line-height: 40px;
+    padding: 0 10px;
+}
+header nav .util .toggle-shop>span i{
+    padding: 0 10px;
+}
+header nav .util .menu>li:hover a>span::after{
+    display: none;
+}
+
+/* bg */
+header .center::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+}
+.open .center::before {
+    opacity: 0.7;
+    visibility: visible;
+}
+/* scroll했을 때 규칙=========================================  */
+.scroll header {
+    padding: 0 10px
+}
+
+.scroll .sp-logo {
+    background-position: 0 -50px;
+}
+
+/* slide ==========================*/
+ 
+.main-slide .t {
+    display: block;
+    padding-top: 50px;
+}
+.main-slide .m,
+.main-slide .p,
+.main-slide .text-box>p,
+.main-slide .swiper-button-prev,
+.main-slide .swiper-button-next,
+.main-slide .swiper-slide button::before
+{
+    display: none;
+}
+
+.main-slide .text-box{
+    margin: initial;
+}
+.main-slide .pagination{
+   position: absolute;
+   bottom: 0px;
+   top: inherit;
+   left: 80px;
+   right: 80px;
+}
+.main-slide .pagination .swiper-pagination{
+   width: 100%;
+   height: 5px;
+   margin: 0;
+   background: #fff;
+}
+.main-slide .text-box {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    margin: initial;
+}
+
+.main-slide .swiper-slide button {
+    position: initial;
+    margin: initial;
+}
+
+/* introduce */
+.introduce {
+    display: none;
+}
+.introduce .text-box{
+    padding: 100px 20px;
+}
+
+.introduce .text-box h2{
+    font-size: 3em;
+}
+.introduce .text-box p{
+    padding: 20px;
+    font-size: 14px;
+}
+.introduce .text-box p:last-child{
+    padding-bottom: 20px;
+}
+
+.introduce .introduce-img{
+    display: none;
+}
+
+.introduce button>span{
+    line-height: 50px;
+    display: inline-flex;
+} 
+
+/* movie */
+.movie .row{
+    padding: 0 0 20px;
+}
+.movie .movie-text{
+    position: static;
+    padding: 20px;
+}
+.movie .movie-wrap{
+    float: none;
+    width: 100%;
+    height: 300px;
+}
+.movie .movie-text p:first-child {
+    font-size: 1em;
+}
+.movie .movie-text p:nth-child(2){
+    font-size: 1.5em;
+}
+.movie .movie-text p:nth-child(3){
+    font-size: 15px;
+}
+.movie .banner .row{
+    padding: 0 0 20px;
+}
+.movie .banner img{
+    height: 100px;
+}
+
+
+
+/* product */
+.product {
+    padding: 30px 0 100px;
+}
+.product .img-product{
+    float: none;
+    width: 100%;
+}
+.product img {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+.product .product-right {
+    width: 100%;
+    padding: 0px 60px;
+    margin: 0;
+}
+
+.tab-nav {
+    padding: 50px 0;
+}
+
+.tab-nav li{
+    width: 33.33%;
+    margin: 10px 0;
+}
+.tab-nav li a{
+    line-height: 30px;
+    font-size: 11px;
+}
+.tab-nav li:nth-child(4){
+    margin-left:16.5%;
+}
+
+.tab-contents p{
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    
+}
+
+/* new-arrival */
+.new-arrival .swiper-slide .item .circle{
+    width: 200px;
+    height: 200px;
+}
+.new-arrival .swiper-slide-active .item{
+    transform: scale(1);
+}
+.new-arrival {
+    padding: 40px 0 100px;
+}
+
+.new-arrival .swiper-slide{
+    padding-top: 0;
+}
+.new-arrival .swiper-slide .name{
+    padding-top: 30px;
+    font-size: 18px;
+}
+.new-arrival .swiper-slide .prce{
+    font-size: 12px;
+}
+
+/* onnline-shop */
+.online-shop{
+    padding: 40px 0 40px;
+}
+.online-shop a {
+    font-size: 35px;
+    margin: 10px 20px;
+}
+
+.online-shop .img-box{
+    background: url(../img/pc_online_shop_bg_b.png) no-repeat;
+    background-size: cover;
+}
+.online-shop .shop-link {
+    padding: 40px 0 80px 0;
+}
+.online-shop a:hover {
+    background:none;
+}
+
+
+/* news/event */
+.event.swiper-container.swiper-container-initialized.swiper-container-horizontal > div.swiper-wrapper > div.swiper-slide.swiper-slide-active > div > a > span, .news.swiper-container.swiper-container-initialized.swiper-container-horizontal > div.swiper-wrapper > div.swiper-slide.swiper-slide-active > div > a > span{
+     display: none;
+ }
+ .event .swiper-slide .item a:hover .desc, .event .swiper-slide .item a:focus .desc, .news .swiper-slide .item a:hover .desc, .news .swiper-slide .item a:focus .desc{
+     display: none;
+ 
+ }
+ .news .swiper-wrapper .info .label, .event .swiper-wrapper .info .label{
+    width: 40px;
+    height: 20px;
+    font-size: 10px;
+    padding: 0 10px;
+    line-height: 20px;
+ }
+
+ .news .swiper-wrapper .info .name, .event .swiper-wrapper .info .name{
+    font-size: 18px;
+ }
+ .news .swiper-slide .date, .event .swiper-slide .date{
+    font-size: 12px;
+ }
+ .news .swiper-slide, .event .swiper-slide{
+    width: 80%;
+ }
+ .news .swiper-pagination {
+    width: 80%;
+}
+.news, .event{
+    padding: 0;
+}
+.event .swiper-slide .item a .desc span.tit, .news .swiper-slide .item a .desc span.tit{
+    display: none;
+}
+
+.event .swiper-pagination{
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    width: 80%;
+    height: 6px;
+    transform: translateX(-50%);
+}
+.sp-right{
+    position: absolute;
+    left: 50%;
+    transform: translate(90%,-20px);
+}
+.sp-left{
+    position: absolute;
+    left: 50%;
+    transform: translate(-209%,-20px);
+}
+
+.news>.title>.sp-right {
+    left: 63%;
+    top: 55%;
+}
+.event>.title .sp-left {
+    left: 34%;
+    top: 55%;
+}
+/* sns */
+.insta {
+    padding: 50px 0;
+}
+.insta .title {
+    margin-left: 70px;
+    padding-bottom: 28px;
+}
+.insta::before {
+    top: 116px;
+}
+.insta-list {
+    padding: 0 80px;
+}
+
+.insta-list li {
+    width: 50%;
+    padding: 10px;
+}
+/* footer */
+footer {
+    padding: 50px 20px;
+    text-align: center;
+}
+footer .util{
+    float: initial;
+    display: inline-block;
+}
+
+footer .util li a{
+    font-size: 14px;
+    padding: 3px 15px;
+}
+
+footer .util li:last-of-type a{
+    padding-right: 0;
+}
+footer address, footer .copyright{
+    display: block;
+    font-size: 10px;
+}
+
+footer .info {
+    display: none;
+}

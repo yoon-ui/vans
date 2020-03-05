@@ -359,8 +359,8 @@ header .center::before {
 
 /* new-arrival */
 .new-arrival .swiper-slide .item .circle{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 .new-arrival .swiper-slide-active .item{
     transform: scale(1);
@@ -385,16 +385,16 @@ header .center::before {
     padding: 40px 0 40px;
 }
 .online-shop a {
-    font-size: 35px;
-    margin: 10px 20px;
+    font-size: 70px;
+    margin: 20px 10px;
 }
 
 .online-shop .img-box{
-    background: url(../img/pc_online_shop_bg_b.png) no-repeat;
+    background: url(../img/mobile_online_shop_bg_b.png) no-repeat;
     background-size: cover;
 }
 .online-shop .shop-link {
-    padding: 40px 0 80px 0;
+    padding: 70px 50px 130px;
 }
 .online-shop a:hover {
     background:none;
